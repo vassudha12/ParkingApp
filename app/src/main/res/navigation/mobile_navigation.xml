@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.parkingapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_parking_history"
+            app:destination="@id/nav_parking_history" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_book_parking"
+            app:destination="@id/nav_book_parking" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_add_parking"
+            app:destination="@id/nav_add_parking" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_book_parking"
+        android:name="com.example.parkingapp.ui.bookparking.BookParkingFragment"
+        android:label="@string/menu_book_parking"
+        tools:layout="@layout/fragment_book_parking" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.parkingapp.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/nav_add_parking"
+        android:name="com.example.parkingapp.ui.addparking.AddParkingFragment"
+        android:label="@string/menu_add_parking"
+        tools:layout="@layout/fragment_add_parking" />
+
+    <fragment
+        android:id="@+id/nav_parking_history"
+        android:name="com.example.parkingapp.ui.parkinghistory.ParkingHistoryFragment"
+        android:label="@string/menu_parking_history"
+        tools:layout="@layout/fragment_parking_history" />
+
+</navigation>
